@@ -1,0 +1,26 @@
+[package]
+name = "aoc_benchmark_rust"
+version = "0.1.0"
+edition = "2021"
+
+[[bench]]
+name = "benchmark"
+harness = false
+
+[dev-dependencies]
+criterion = "0.5.1"
+
+[dependencies]
+criterion = "0.5.1"
+
+[[bin]]
+name = "day1"
+path = "solutions/day1.rs"
+
+[[bin]]
+name = "day2"
+path = "solutions/day2.rs"
+
+[[bin]]
+name = "day3"
+path = "solutions/day3.rs"
