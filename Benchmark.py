@@ -49,10 +49,12 @@ def benchmark_rust(day):
     bin_path = (Path(RUST_DIR) / "target" / "release" / day).resolve()
     times = []
     for _ in range(NUM_RUNS):
-        time, _ = run_process([str(bin_path)], cwd=RUST_DIR)
+        time, output = run_process([str(bin_path)], cwd=RUST_DIR)
+        if output.startswith("No solution found"):
+            raise ValueError(output)
         times.append(time)
     avg_time = sum(times) / NUM_RUNS
-    return avg_time, f"The benchmark for {day} ran successfully."
+    return avg_time, output
 
 def benchmark_python(day):
     times = []

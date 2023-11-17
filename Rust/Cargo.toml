@@ -16,11 +16,3 @@ criterion = "0.5.1"
 [[bin]]
 name = "day1"
 path = "solutions/day1.rs"
-
-[[bin]]
-name = "day2"
-path = "solutions/day2.rs"
-
-[[bin]]
-name = "day3"
-path = "solutions/day3.rs"
